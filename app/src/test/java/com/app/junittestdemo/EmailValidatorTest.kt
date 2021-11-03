@@ -10,7 +10,7 @@ class EmailValidatorTest {
 
     @Test
     fun testIsEmailValid() {
-        val testEmail = "anupamchugh@gmail.com"
+        val testEmail = "solankizeel@gmail.com"
         Assert.assertThat(String.format("Email Validity Test failed for %s ", testEmail), EmailUtils.checkEmailForValidity(testEmail), `is`(true))
     }
 
@@ -18,10 +18,7 @@ class EmailValidatorTest {
     fun testCheckDateWasConvertedCorrectly() {
         val inMillis = System.currentTimeMillis()
         val date: Date = EmailUtils.calendarDate(inMillis)
-        assertEquals(
-            "Date time in millis is wrong",
-            inMillis * 1000, date.time
-        )
+        assertEquals("Date time in millis is wrong", inMillis * 1000, date.time)
     }
 
     @Test
