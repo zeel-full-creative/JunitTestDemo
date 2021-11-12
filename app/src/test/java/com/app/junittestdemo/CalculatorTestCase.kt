@@ -1,9 +1,6 @@
 package com.app.junittestdemo
 
 import junit.framework.TestCase
-import org.junit.After
-import org.junit.Before
-import org.junit.Test
 
 class CalculatorTestCase : TestCase() {
 
@@ -25,13 +22,21 @@ class CalculatorTestCase : TestCase() {
     }
 
     fun testSub() {
+        val expected = 0
+        assertEquals(expected, calculatorTest.sub(5, 5))
         println("Is Tests are completed successfully = ${createResult().wasSuccessful()}")
     }
 
     fun testDiv() {
-
+        val expected = 2
+        assertEquals(expected, calculatorTest.div(4, 2))
+        println("Is Tests are completed successfully = ${createResult().wasSuccessful()}")
     }
 
-    fun testMultiply() {}
+    fun testMultiply() {
+        val expected = 8
+        assertEquals(expected, calculatorTest.multiply(4, 2))
+        println("Is Tests are completed successfully = ${createResult().wasSuccessful()}")
+    }
 
 }
